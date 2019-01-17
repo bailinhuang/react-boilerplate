@@ -4,23 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "server": "webpack-dev-server --open --mode development",
-    "dev": "webpack --mode development"
+    "build": "webpack --mode production --config webpack.config.prod.js",
+    "server": "webpack-dev-server --open",
+    "server:hot": "npm run server -- --hot",
+    "dev": "webpack --mode development --config webpack.config.dev.js"
   },
   "author": "bailin huang",
   "license": "ISC",
   "dependencies": {
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "i": "^0.3.6",
+    "react-hot-loader": "^4.6.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
