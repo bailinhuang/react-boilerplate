@@ -13,8 +13,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: [ "@babel/plugin-proposal-class-properties", 'react-hot-loader/babel' ]
+          presets: [['@babel/preset-env', {
+            targets: {chrome: 68},
+            useBuiltIns: 'entry'}], '@babel/preset-react'],
+          plugins: [ '@babel/plugin-proposal-class-properties', 'react-hot-loader/babel' ]
         },
         exclude: /node_modules/
       },
