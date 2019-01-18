@@ -14,7 +14,11 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: [['@babel/preset-env', {
-            targets: {chrome: 68},
+            targets: [
+              'last 2 versions',
+              'not dead',
+              'not < 2%'
+            ],
             useBuiltIns: 'entry'}], '@babel/preset-react'],
           plugins: [ '@babel/plugin-proposal-class-properties', 'react-hot-loader/babel' ]
         },
