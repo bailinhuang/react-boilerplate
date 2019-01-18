@@ -1,15 +1,15 @@
-const path = require('path');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
-  mode: "production",
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: './main.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
     watchContentBase: true,
@@ -32,12 +32,12 @@ const config = {
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: [ "@babel/plugin-proposal-class-properties", 'react-hot-loader/babel' ]
+          plugins: [ '@babel/plugin-proposal-class-properties', 'react-hot-loader/babel' ]
         }
       }, {
         test: /\.css$/,
         use: [
-          "style-loader", "css-loader"
+          'style-loader', 'css-loader'
         ]
       }
     ]
@@ -47,10 +47,7 @@ const config = {
       '.js',
       '.jsx'
     ]
-  },
-  devServer: {
-    contentBase: './dist'
   }
 }
 
-module.exports = config;
+module.exports = config

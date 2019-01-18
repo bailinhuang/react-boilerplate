@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import s from "./app.component.css"
+import React, { Component } from 'react'
+import s from './app.component.css'
 import { hot } from 'react-hot-loader'
 class App extends Component {
 
@@ -8,7 +8,7 @@ class App extends Component {
   }
 
   addCount = () => {
-    this.setState(state => ({count: state.count + 1}))
+    this.setState(state => ({count: state.count + 1}))  
   }
 
   decrement = () => {
