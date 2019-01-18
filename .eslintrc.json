@@ -1,11 +1,19 @@
 {
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "commonjs": true,
         "es6": true,
         "node": true
     },
+    "settings": {
+      "react": {
+        "version": "16.7.0"
+      }
+    },
     "extends": [
+        "prettier",
+        "prettier/react",
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:jsx-a11y/recommended"
@@ -17,7 +25,7 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins":  ["react", "jsx-a11y", "babel"],
+    "plugins":  ["prettier", "react", "jsx-a11y", "babel"],
     "rules": {
         "indent": [
             "error", 2
